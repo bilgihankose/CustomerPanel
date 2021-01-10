@@ -18,12 +18,6 @@ namespace CustomerPanel.Controllers
         }
 
 
-        //public ActionResult Index23232()
-        //{
-
-        //    var customers = _customerRepository.GetCustomers();
-        //    return View(customers);
-        //}
 
         public ActionResult Index()
         {
