@@ -1,0 +1,45 @@
+﻿@model CustomerPanel.ViewModels.CustomerViewModel
+
+<br />
+<br />
+<div>
+    <form action="/Home/AddCustomer" method="post">
+        <div class="mb-3">
+            <p>Lütfen müşteri kaydetmek istediğiniz kafeyi seçiniz.</p>
+            <select class="form-control" name="CafeId" id="exampleFormControlSelect1">
+                @foreach (var item in Model.cafes)
+                {
+                    <option value="@item.Id" name="CafeId">@item.Name</option>
+                }
+            </select>
+        </div>
+        <br />
+        <div class="mb-3">
+
+            <label for="Name" class="form-label">İsim</label>
+            <input type="text" name="Name" class="form-control" placeholder="BİLGİHAN">
+            <p>Lütfen isminizi büyük harfle yazınız.</p>
+        </div>
+
+        <div class="mb-3">
+            <label for="Surname" class="form-label">Soyisim</label>
+            <input type="text" name="Surname" class="form-control" placeholder="KÖSE">
+            <p>Lütfen soyisminizi büyük harfle yazınız.</p>
+        </div>
+
+        <div class="mb-3">
+            <label for="Year" class="form-label">Doğum Yılı</label>
+            <input type="text" name="Year" class="form-control" placeholder="1993">
+            <p>Lütfen sadece doğum yılınızı yazınız.</p>
+        </div>
+
+        <div class="mb-3">
+            <label for="TC" class="form-label">TC Kimlik Numarası</label>
+            <input type="text" name="Tc" class="form-control" placeholder="12345678901">
+            <p>Lütfen TC Kimlik numaranızı yazınız.</p>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+
+    </form>
+</div>

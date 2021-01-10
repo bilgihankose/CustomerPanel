@@ -1,0 +1,15 @@
+﻿@using CustomerPanel.ViewModels
+@model ResponseViewModel
+@{
+    ViewBag.Title = "Sonuç";
+}
+@if (Model.Response)
+{
+    <h2>Kayıt alınmıştır, yeni kayıt girmek için <a href="/Home/Index">tıklayınız.</a></h2>
+}
+
+@if (!Model.Response)
+{
+    <h2>Girdiğiniz bilgiler hatalıdır, yeniden denemek için <a href="/Home/Index">tıklayınız.</a></h2>
+}
+
